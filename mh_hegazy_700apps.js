@@ -14,13 +14,15 @@ $('.leader').each(function () {
 $(".target-all-followers-btn").click(function () {
     var btn = $(this);    
     let btnStatus = btn.attr("working");
-    console.log(btnStatus)
+    
     if (btnStatus == 'off') {
         btn.attr("working", "on");
-        btn.closest(".leader-follower-container").find(".follower-box").slideDown()
+        btn.find("span").addClass("fa-eye").removeClass("fa-eye-slash")
+        btn.closest(".leader-follower-container").find(".follower-box").slideDown().addClass("opened");
     }else{
         btn.attr("working", "off");
-        btn.closest(".leader-follower-container").find(".follower-box").slideUp()
+        btn.find("span").addClass("fa-eye-slash").removeClass("fa-eye")
+        btn.closest(".leader-follower-container").find(".follower-box").slideUp().removeClass("opened");
     }
 })
 
