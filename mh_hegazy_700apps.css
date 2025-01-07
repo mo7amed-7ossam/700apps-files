@@ -5,6 +5,9 @@
     box-sizing: border-box;
     font-family: "cairo";
     font-weight: normal;
+    background-color: transparent;
+    border: none;
+    outline: none;
 }
 
 /* global style table */
@@ -106,13 +109,14 @@
     color: var(--follower-header-text-color);
 }
 
-.follower-box .follower td{
+.follower-box .follower td {
     color: var(--follower-tbody-text-color);
 }
 
 .follower-box .follower tbody tr:nth-child(odd) {
     background-color: var(--follower-tr-odd);
 }
+
 .follower-box .follower tbody tr:nth-child(even) {
     background-color: var(--follower-tr-even);
 }
