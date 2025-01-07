@@ -26,4 +26,19 @@ $(".target-all-followers-btn").click(function () {
     }
 })
 
+$(".target-follower-btn").click(function () {
+    var btn = $(this);    
+    let btnStatus = btn.attr("working");
+    
+    if (btnStatus == 'off') {
+        btn.attr("working", "on");
+        btn.find("span").addClass("fa-eye").removeClass("fa-eye-slash")
+        btn.closest(".leader-follower-box").find(".follower-box").slideDown().addClass("opened");
+    }else{
+        btn.attr("working", "off");
+        btn.find("span").addClass("fa-eye-slash").removeClass("fa-eye")
+        btn.closest(".leader-follower-box").find(".follower-box").slideUp().removeClass("opened");
+    }
+})
+
 
