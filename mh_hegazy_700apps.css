@@ -1,0 +1,124 @@
+.leader-follower-container,
+.leader-follower-container * {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "cairo";
+    font-weight: normal;
+}
+
+/* global style table */
+
+:root {
+    /* header & leader colors */
+    --header-bg-color: #002fff;
+    --header-border-color: #fff;
+    --header-text-color: #fff;
+    --odd-color: #93bcfa;
+    --even-color: #4e93fa;
+    --tbody-text-color: #f9f9f9;
+    --header-leader-cell-border-color: #ffffffa9;
+    /* follower colors */
+    --follower-header-bg-color: #000931;
+    --follower-header-text-color: #fff;
+    --follower-tbody-text-color: #fff;
+    --follower-border-color: #4e93fa;
+    --follower-tr-odd: #001da0;
+    --follower-tr-even: #0029e2;
+}
+
+
+.leader-follower-container table {
+    border-collapse: collapse;
+}
+
+/* direction */
+
+.rtl {
+    direction: rtl;
+}
+
+/* leader follower container headar */
+
+.leader-follower-container-headar {
+    width: 100%;
+}
+
+.leader-follower-container-headar thead tr {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    border-bottom: solid 1px var(--header-border-color);
+}
+
+/* leader & follower boxs container */
+
+.leader-follower-container {
+    width: 100%;
+}
+
+/* leader & follower box */
+
+.leader-follower-container .leader-follower-box {
+    width: 100%;
+}
+
+/* leader table */
+
+.leader-follower-container .leader-follower-box .leader {
+    width: 100%;
+}
+
+.leader-follower-container .leader-follower-box .leader tbody {
+    color: var(--tbody-text-color);
+}
+
+.leader-follower-container .leader-follower-box:nth-child(odd) .leader tbody tr {
+    background-color: var(--odd-color);
+}
+
+.leader-follower-container .leader-follower-box:nth-child(even) .leader tbody tr {
+    background-color: var(--even-color);
+}
+
+.leader-follower-container .leader-follower-box .leader tbody tr:hover {
+    opacity: .9;
+}
+
+.leader-follower-container .leader-follower-container-headar th,
+.leader-follower-container .leader td {
+    text-align: center;
+    padding: 3px 0px;
+    border-left: solid 1px var(--header-leader-cell-border-color);
+}
+
+/* follower-box */
+
+.follower-box {
+    width: 100%;
+}
+
+.follower-box .follower {
+    width: 100%;
+}
+
+.follower-box .follower thead {
+    background-color: var(--follower-header-bg-color);
+    color: var(--follower-header-text-color);
+}
+
+.follower-box .follower td{
+    color: var(--follower-tbody-text-color);
+}
+
+.follower-box .follower tbody tr:nth-child(odd) {
+    background-color: var(--follower-tr-odd);
+}
+.follower-box .follower tbody tr:nth-child(even) {
+    background-color: var(--follower-tr-even);
+}
+
+.follower-box .follower th,
+.follower-box .follower td {
+    text-align: center;
+    border-left: solid 1px var(--follower-border-color);
+}
