@@ -17,11 +17,11 @@ $(".target-all-followers-btn").click(function () {
     
     if (btnStatus == 'off') {
         btn.attr("working", "on");
-        btn.find("span").addClass("fa-eye").removeClass("fa-eye-slash")
+        $(".toggle-btn span").addClass("fa-eye").removeClass("fa-eye-slash")
         btn.closest(".leader-follower-container").find(".follower-box").slideDown().addClass("opened");
     }else{
         btn.attr("working", "off");
-        btn.find("span").addClass("fa-eye-slash").removeClass("fa-eye")
+        $(".toggle-btn span").addClass("fa-eye-slash").removeClass("fa-eye")
         btn.closest(".leader-follower-container").find(".follower-box").slideUp().removeClass("opened");
     }
 })
