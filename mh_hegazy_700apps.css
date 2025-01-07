@@ -124,4 +124,5 @@
 .follower-box .follower td {
     text-align: center;
     border-left: solid 1px var(--follower-border-color);
+    padding: 3px 0px;
 }
