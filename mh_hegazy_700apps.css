@@ -97,6 +97,7 @@
 
 .follower-box {
     width: 100%;
+    display: none;
 }
 
 .follower-box .follower {
