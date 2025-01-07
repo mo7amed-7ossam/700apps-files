@@ -16,12 +16,12 @@ $(".target-all-followers-btn").click(function () {
     let btnStatus = btn.attr("working");
     
     if (btnStatus == 'off') {
-        btn.attr("working", "on");
-        $(".toggle-btn span").addClass("fa-eye").removeClass("fa-eye-slash")
+        btn.closest(".leader-follower-container").find(".toggle-btn").attr("working", "on");
+        btn.closest(".leader-follower-container").find(".toggle-btn span").addClass("fa-eye").removeClass("fa-eye-slash")
         btn.closest(".leader-follower-container").find(".follower-box").slideDown().addClass("opened");
     }else{
-        btn.attr("working", "off");
-        $(".toggle-btn span").addClass("fa-eye-slash").removeClass("fa-eye")
+        btn.closest(".leader-follower-container").find(".toggle-btn").attr("working", "off");
+        btn.closest(".leader-follower-container").find(".toggle-btn span").addClass("fa-eye-slash").removeClass("fa-eye")
         btn.closest(".leader-follower-container").find(".follower-box").slideUp().removeClass("opened");
     }
 })
